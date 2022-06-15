@@ -7,7 +7,7 @@ package lippia.web.services;
         import static com.crowdar.core.actions.WebActionManager.navigateTo;
         import static lippia.web.constants.PracticeAutomationTestingContants.*;
 
-public class PracticeAutomationTestingService extends ActionManager {
+public class LoginPAT_Service extends ActionManager {
 
     public static void navegarWeb(){
         navigateTo(PropertyManager.getProperty("web.base.url"));
