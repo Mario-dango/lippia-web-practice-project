@@ -2,6 +2,7 @@ package lippia.web.steps;
 
         import com.crowdar.core.PageSteps;
         import io.cucumber.java.en.*;
+        import lippia.web.constants.PracticeAutomationTestingContants;
         import lippia.web.services.PracticeAutomationTestingService;
 
 public class PracticeAutomationTestingSteps extends PageSteps {
@@ -33,6 +34,11 @@ public class PracticeAutomationTestingSteps extends PageSteps {
 
     @Then("El usuario verifica que ingreso correctamente a la web")
     public void elUsuarioVerificaQueIngresoCorrectamenteALaWeb() {
-        PracticeAutomationTestingService.verificarLogin();
+        PracticeAutomationTestingService.verificarLogin(PracticeAutomationTestingContants.BTN_LOGOUT_XPATH);
+    }
+
+    @Then("El usuario verifica que no pudo ingresar a la web")
+    public void elUsuarioVerificaQueNoIngresoCorrectamenteALaWeb() {
+        PracticeAutomationTestingService.verificarLogin(PracticeAutomationTestingContants.ERROR_LOGIN_XPATH);
     }
 }

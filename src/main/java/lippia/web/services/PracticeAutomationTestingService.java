@@ -29,7 +29,7 @@ public class PracticeAutomationTestingService extends ActionManager {
         click(BTN_LOGIN_XPATH);
     }
 
-    public static void verificarLogin(){
-        Assert.assertTrue(isVisible(BTN_LOGOUT_XPATH));
+    public static void verificarLogin(String contant){
+        Assert.assertTrue(isVisible(contant));
     }
 }
