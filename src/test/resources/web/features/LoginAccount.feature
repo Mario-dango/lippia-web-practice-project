@@ -6,7 +6,7 @@ Feature: El usuario accede a la web
     When El usuario hace click en el botón "My Account" del menú
 
   #OK
-  #@Test_login_success @Test_Login
+  @Test_login_success @Test_Login
   Scenario Outline: El usuario se logea correctamente con credenciales validas
     And El usuario ingresa su username "<Usuario>"
     And El usuario ingresa su pasword "<Clave>"

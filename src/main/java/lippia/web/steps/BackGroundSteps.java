@@ -13,6 +13,6 @@ public class BackGroundSteps {
 
     @When("^El usuario hace click en el botón \"(.*)\" del menú$")
     public void elUsuarioClickeaElBotónDelMenú(String myAccountButton) {
-        BackgroundService.clickMyAccount();
+        BackgroundService.clickEnBoton(myAccountButton);
     }
 }

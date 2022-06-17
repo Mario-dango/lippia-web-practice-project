@@ -19,7 +19,7 @@ public class RegisterPAT_Steps extends PageSteps {
 
     @And("El usuario clickea el botón \"Register\"")
     public void elUsuarioClickeaElBotón() {
-        RegisterPAT_Service.clickLoginBtn();
+        RegisterPAT_Service.clickRegisterBtn();
     }
 
     @Then("El usuario verifica que ingreso correctamente a la web")

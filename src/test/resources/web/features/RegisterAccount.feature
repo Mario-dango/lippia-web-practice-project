@@ -4,7 +4,7 @@ Feature: El usuario registra una cuenta a la web
     Given El usuario ingresa a la web Automation Practice
     When El usuario hace click en el botón "My Account" del menú
 
-  @Test_success #@Test_Register #Funciona
+  @Test_success @Test_Register #Funciona
   Scenario Outline: El usuario se crea exitosamente una cuenta con credenciales validas
     And El usuario ingresa su correo en el campo de Register "<correo>"
     And El usuario ingresa su contraseña en el campo de Register "<clave>"
@@ -12,13 +12,13 @@ Feature: El usuario registra una cuenta a la web
     Then El usuario verifica que ingreso correctamente a la web
 
     Examples:
-      | correo                | clave            |
-      | prueba@ambar.com      | ambar2022!       |
-      | mario.papetti@lol.com | MarioPapetti2022 |
+      | correo            | clave                |
+      | prueba@abar.comer | ambar*/*/2022!       |
+      | mario@test.com    | Mario*/*/Papetti2022 |
 
     #Revisar en el clickeo del botón ya que lo inhabilita por falta de
     # párametros en el e-mail y también por tener clave muy debíl
-  @Test_fail_invalid_email_id #@Test_Register #Funciona
+  @Test_fail_invalid_email_id @Test_Register #Funciona
   Scenario Outline: El usuario no logra crease la cuenta por correo no valido
     And El usuario ingresa su correo en el campo de Register "<correo>"
     And El usuario ingresa su contraseña en el campo de Register "<clave>"
@@ -39,7 +39,7 @@ Feature: El usuario registra una cuenta a la web
       | teclado@algo | COntrase?¡a34 |
 
     # OK
-  @Test_fail_empty_email_id #@Test_Register #Funciona
+  @Test_fail_empty_email_id @Test_Register #Funciona
   Scenario Outline: El usuario no logra crease la cuenta por no ingresar correo
     And El usuario ingresa su correo en el campo de Register "<correo>"
     And El usuario ingresa su contraseña en el campo de Register "<clave>"

@@ -16,7 +16,7 @@ public class RegisterPAT_Service extends ActionManager {
         setInput(INPUT_REG_PASSWORD_ID, pass);
     }
 
-    public static void clickLoginBtn(){
+    public static void clickRegisterBtn(){
         click(BTN_REGISTER_XPATH);
     }
 
