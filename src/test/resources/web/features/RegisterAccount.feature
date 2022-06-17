@@ -1,9 +1,12 @@
 Feature: El usuario registra una cuenta a la web
 
+  # que
+  # como
+  # para
 
   Background:
-    Given El usuario se encuentra en la web Automation Practice
-    When El usuario clickea el botón "My Account" del menú
+    Given El usuario ingresa a la web Automation Practice
+    When El usuario hace click en el botón "My Account" del menú
 
   @Test_success
   Scenario Outline: El usuario se crea exitosamente una cuenta con credenciales validas
@@ -38,7 +41,7 @@ Feature: El usuario registra una cuenta a la web
       | teclado@algo  | COntrase?¡a34       |
 
     # OK
-  @Test_fail_empty_email-ID
+  @Test_fail_empty_email_id
   Scenario Outline: El usuario no logra crease la cuenta por no ingresar correo
     And El usuario ingresa su correo en el campo de Register "<correo>"
     And El usuario ingresa su contraseña en el campo de Register "<clave>"
@@ -50,13 +53,13 @@ Feature: El usuario registra una cuenta a la web
       | correo | clave               |
       |        | TestingCrowñar2022! |
 
-    #OK
+    # No está tomando el XPATH con la variable de "Leyenda"
   @Test_fail_empty_password
   Scenario Outline: El usuario no logra crease la cuenta por no ingresar clave
     And El usuario ingresa su correo en el campo de Register "<correo>"
     And El usuario ingresa su contraseña en el campo de Register "<clave>"
     And El usuario clickea el botón "Register"
-    Then El usuario verifica que no se habilita el botón para concretar el registro
+    Then El usuario verifica que no pudo registrarse a la web, apareciendo la leyenda " Please enter an account password."
 
     ####!!  Tener en cuenta que sin @ entre otras restricciones de casilla
       # no habilitarán el botón de registro

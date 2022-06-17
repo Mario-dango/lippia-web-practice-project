@@ -1,23 +1,14 @@
 package lippia.web.services;
 
-import com.crowdar.core.PropertyManager;
 import com.crowdar.core.actions.ActionManager;
 import org.testng.Assert;
 
-import static com.crowdar.core.actions.WebActionManager.navigateTo;
 import static lippia.web.constants.PracticeAutomationTestingContants.*;
 
 public class RegisterPAT_Service extends ActionManager {
 
-    public static void navegarWeb(){
-        navigateTo(PropertyManager.getProperty("web.base.url"));
-    }
-
-    public static void clickMyAccount(){
-        click(BTN_MYACCOUNT_ID);
-    }
-
     public static void completarCorreo(String username){
+
         setInput(INPUT_REG_EMAIL_ID, username);
     }
 
@@ -31,7 +22,7 @@ public class RegisterPAT_Service extends ActionManager {
 
     public static void verificarLogin(){Assert.assertTrue(isVisible(BTN_LOGOUT_XPATH));
     }
-    public static void verificarRegister(String error_label){Assert.assertTrue(isVisible(ERROR_REGISTER_XPATH, error_label));
+    public static void verificarRegister(String error_label){Assert.assertTrue(isVisible(ERROR_REGISTER_XPATH_d));
     }
     public static void verificarRegister_const(){Assert.assertTrue(isVisible(ERROR_REGISTER_XPATH));
     }
