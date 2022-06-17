@@ -29,12 +29,12 @@ public class LoginPAT_Steps extends PageSteps {
         public void verificarIngresoWeb() {
                 LoginPAT_Service.verificarLogin(PracticeAutomationTestingContants.BTN_LOGOUT_XPATH);
         }
-//////////////
+
         @And("^El usuario visualiza el error \"(.*)\"$")
         public void elUsuarioVisualizaError(String error_label) {
                 LoginPAT_Service.verificarErrorEnPantalla(error_label);
         }
-////////////
+
         @Then("El usuario verifica que no pudo ingresar a la web")
         public void elUsuarioVerificaNotificacionDeError() {
                 LoginPAT_Service.verificarNoLogin();

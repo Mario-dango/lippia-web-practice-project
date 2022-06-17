@@ -22,9 +22,7 @@ public class RegisterPAT_Service extends ActionManager {
 
     public static void verificarLogin(){Assert.assertTrue(isVisible(BTN_LOGOUT_XPATH));
     }
-    public static void verificarRegister(String error_label){Assert.assertTrue(isVisible(ERROR_REGISTER_XPATH_d));
-    }
-    public static void verificarRegister_const(){Assert.assertTrue(isVisible(ERROR_REGISTER_XPATH));
+    public static void verificarRegister(){Assert.assertTrue(isVisible(ERROR_BOX_XPATH));
     }
 
     public static void verificarBotonRegistro(){Assert.assertTrue(isVisible(BTN_REGISTER_DISABLE));

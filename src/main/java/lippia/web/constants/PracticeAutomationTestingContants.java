@@ -18,7 +18,5 @@ public class PracticeAutomationTestingContants {
     public static final String INPUT_REG_PASSWORD_ID = "id:reg_password";
     public static final String BTN_REGISTER_XPATH = "xpath://input[@value='Register']";
     public static final String ERROR_REGISTER_XPATH = "xpath://li[text()='%s'";
-    //public static final String ERROR_REGISTER_XPATH = "xpath://li[text()=' Please provide a valid email address.'";
-    public static final String ERROR_REGISTER_XPATH_d = "xpath://li[text()=' Please enter an account password.'";
     public static final String BTN_REGISTER_DISABLE = "xpath://input[@disable='disable']";
 }

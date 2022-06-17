@@ -17,8 +17,8 @@ public class RegisterPAT_Steps extends PageSteps {
         RegisterPAT_Service.completarClave(password);
     }
 
-    @And("^El usuario clickea el botón \"(.*)\"$")
-    public void elUsuarioClickeaElBotón(String registerButton) {
+    @And("El usuario clickea el botón \"Register\"")
+    public void elUsuarioClickeaElBotón() {
         RegisterPAT_Service.clickLoginBtn();
     }
 
@@ -27,15 +27,13 @@ public class RegisterPAT_Steps extends PageSteps {
         RegisterPAT_Service.verificarLogin();
     }
 
-    @Then("^El usuario verifica que no pudo registrarse a la web, apareciendo la leyenda \"(.*)\"$")
-    public void elUsuarioVerificaQueNoIngresoCorrectamenteALaWeb(String error_label) {
-        RegisterPAT_Service.verificarRegister(error_label);
-        //RegisterPAT_Service.verificarRegister_const();
+    @Then("El usuario verifica que no pudo registrarse a la web")
+    public void elUsuarioVerificaQueNoIngresoCorrectamenteALaWeb() {
+        RegisterPAT_Service.verificarRegister();
     }
 
     @Then("El usuario verifica que no se habilita el botón para concretar el registro")
     public void botonDeRegistroDeshabilitado() {
-
         RegisterPAT_Service.verificarBotonRegistro();
     }
 
