@@ -10,7 +10,7 @@ public class PracticeAutomationTestingContants {
     public static final String BTN_LOGIN_XPATH = "xpath://input[@value='Login']";
     public static final String BTN_LOGOUT_XPATH = "xpath://a[text()='Logout']";
     public static final String ERROR_BOX_XPATH = "xpath://ul[@class='woocommerce-error']";
-    public static final String ERROR_TEXT_XPATH = "xpath://li[text()='%s']"; // antes no funcionaba, ahora si (?
+    public static final String ERROR_TEXT_XPATH = "xpath://li[text()='%s']";
 
     //Constants to Register Side
 
@@ -21,5 +21,7 @@ public class PracticeAutomationTestingContants {
 
 
     public static final String BTN_ORDERS_XPATH = "xpath://a[text()='Orders']";
+    public static final String BTN_ACCOUNT_DETAILS_XPATH = "xpath://a[text()='Account Details']";
     public static final String BTN_GO_TO_ORDER_XPATH = "xpath://*[@id=\"page-36\"]/div/div[1]/div/div/a";
+    public static final String BTN_SAVE_CHANGES_XPATH = "xpath://input[@value='Save changes']";
 }
